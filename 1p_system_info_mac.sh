@@ -6,7 +6,7 @@ LOG_FILE="/tmp/system_report.log"
 # Clear previous log file if exists
 > "$LOG_FILE"
 
-echo "=== System Report - $(date) ===" >> "$LOG_FILE"
+echo "=== KKRAM System Report - $(date) ===" >> "$LOG_FILE"
 echo "Hostname: $(hostname)" >> "$LOG_FILE"
 
 echo "Uptime:" >> "$LOG_FILE"
@@ -18,7 +18,7 @@ sysctl -n machdep.cpu.brand_string >> "$LOG_FILE"
 echo "Memory Info:" >> "$LOG_FILE"
 vm_stat >> "$LOG_FILE"
 
-echo "Disk Usage:" >> "$LOG_FILE"
+echo "DiskKK Usage:" >> "$LOG_FILE"
 df -h / >> "$LOG_FILE"
 
 echo "---------------------------------" >> "$LOG_FILE"
