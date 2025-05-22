@@ -5,7 +5,7 @@ LOG_FILE="/tmp/system_report.log"
 # Clear previous log file
 > "$LOG_FILE"
 
-echo "=== System Report - $(date) ===" >> "$LOG_FILE"
+echo "=== Kranthi MacBook System Report - $(date) ===" >> "$LOG_FILE"
 echo "Hostname: $(hostname)" >> "$LOG_FILE"
 
 echo "Uptime:" >> "$LOG_FILE"
