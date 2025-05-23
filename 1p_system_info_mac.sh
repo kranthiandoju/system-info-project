@@ -6,7 +6,7 @@ LOG_FILE="/tmp/system_report.log"
 # Clear previous log file if exists
 > "$LOG_FILE"
 
-echo "=== SRIRAM2 System Report - $(date) ===" >> "$LOG_FILE"
+echo "=== TK1 System Report - $(date) ===" >> "$LOG_FILE"
 echo "Hostname: $(hostname)" >> "$LOG_FILE"
 
 echo "Uptime:" >> "$LOG_FILE"
