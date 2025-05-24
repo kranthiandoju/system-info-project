@@ -24,15 +24,3 @@ aws ec2 describe-instances \
   --output table >> "$LOG_FILE"
 
 echo "---------------------------------" >> "$LOG_FILE"
-
-# AWS EC2 Free Tier Usage
-echo "AWS EC2 Free Tier Estimated Usage (Month):" >> "$LOG_FILE"
-aws ce get-cost-and-usage \
-  --time-period Start=$(date +%Y-%m-01),End=$(date +%Y-%m-%d) \
-  --granularity MONTHLY \
-  --metrics "UsageQuantity" \
-  --filter '{"Dimensions":{"Key":"Service","Values":["Amazon Elastic Compute Cloud - Compute"]}}' \
-  --output table >> "$LOG_FILE"
-
-echo "---------------------------------" >> "$LOG_FILE"
-echo "System info report has been saved to $LOG_FILE"
